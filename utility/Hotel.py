@@ -34,11 +34,12 @@ class Hotel:
                                        == self.hotel_id, 'available'].values[0]
 
         if availability == 'yes' and capacity > 0:
-            hotels_data.loc[hotels_data['id'] == self.hotel_id, 'capacity'] -= 1
+            hotels_data.loc[hotels_data['id'] ==
+                            self.hotel_id, 'capacity'] -= 1
 
             if hotels_data.loc[hotels_data['id'] == self.hotel_id, 'capacity'].values[0] == 0:
                 hotels_data.loc[hotels_data['id'] ==
-                                 self.hotel_id, 'available'] = 'no'
+                                self.hotel_id, 'available'] = 'no'
 
             hotels_data.to_csv(self.path, index=False)
             print("Room has been booked.")

@@ -9,14 +9,16 @@ if __name__ == '__main__':
     user_instance = UserInfo()
     print(hotel_instance.read_db())
     if hotel_instance.is_hotel_available():
-        # name = input("Enter your name: ")
-        # last_name = input("Enter your last name: ")
-        name = 'John'
-        last_name = 'Doe'
-        reservation_instance = ReservationTicket(path, user_hotel_id, name, last_name)
+        # customer_name = input("Enter your name: ")
+        # customer_last_name = input("Enter your last name: ")
+        customer_name = 'John'
+        customer_last_name = 'Doe'
+        reservation_instance = ReservationTicket(
+            user_hotel_id, customer_name, customer_last_name, path)
         reservation_instance.generate_ticket()
         print("Hotel is available.")
-        do_you_want_to_book = input("Do you want to book this hotel? (yes/no): ")
+        do_you_want_to_book = input(
+            "Do you want to book this hotel? (yes/no): ")
         if do_you_want_to_book == 'yes':
             hotel_instance.book_hotel()
     else:
