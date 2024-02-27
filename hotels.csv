@@ -1,0 +1,40 @@
+id,name,city,capacity,available
+134,Tourist Sunny Apartment,Anchorage,4,yes
+188,Snow Palace,New Delhi,5,yes
+655,City Break Inn,Porto-Novo,3,yes
+217,Cozy Cabin Retreat,Aspen,2,yes
+392,Seaside Serenity,Sydney,6,yes
+511,Urban Oasis Loft,Barcelona,0,no
+633,Mountain View Lodge,Whistler,3,yes
+742,Safari Haven,Nairobi,5,yes
+819,Tranquil Villa Retreat,Bali,0,no
+927,Lakeside Lodge,Oslo,3,yes
+104,Desert Rose Retreat,Dubai,6,yes
+373,Countryside Cottage,Paris,50,yes
+449,Tropical Hideaway,Cancun,0,no
+236,Cottage by the Lake,Seattle,4,yes
+599,Hilltop Haven,Athens,3,yes
+777,Beachfront Bungalow,Miami,5,yes
+842,Castle Retreat,Edinburgh,6,yes
+953,Island Paradise Resort,Maldives,4,yes
+264,Charming Chalet,Zurich,3,yes
+378,Loft Living Downtown,New York City,2,yes
+509,Rustic Cabin Getaway,Denver,5,yes
+629,Modern City Studio,Tokyo,3,yes
+711,Quaint Village Cottage,Amsterdam,4,yes
+812,Coastal Escape Haven,Los Angeles,5,yes
+923,Riverside Retreat,Lisbon,3,yes
+245,Mountain Hideaway,Denver,4,yes
+377,Luxury Villa Estate,Rome,6,yes
+498,Serenity Cabin,Reykjavik,2,yes
+601,Art Deco Urban Loft,Paris,4,yes
+733,Seaside Cottage Escape,Sydney,3,yes
+846,Mountain Chalet Escape,Whistler,0,no
+959,Beachside Paradise Resort,Bali,0,no
+267,Forest Cabin Retreat,Oslo,2,yes
+383,Grand Lakeview Mansion,Los Angeles,6,yes
+505,City Skyline View,New York,3,yes
+628,Sunset View Cottage,Santorini,5,yes
+721,Hidden Forest Lodge,Tokyo,4,yes
+839,Tranquil Oasis Villa,Athens,3,yes
+931,Romantic Vineyard Cottage,Florence,2,yes
