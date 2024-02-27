@@ -20,7 +20,7 @@ Before running the program, make sure you have the following installed:
 1. Clone the repository:
 
    ```shell
-   git clone https://github.com/empchief/Python-Scraping-GitHub
+   git clone https://github.com/EMPChief/Python-Hotel-Booking
    ```
 
 2. Create and activate a virtual environment (optional but recommended):
