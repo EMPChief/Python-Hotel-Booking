@@ -27,9 +27,9 @@ if __name__ == '__main__':
             "Do you want to book this hotel? (yes/no): ").lower()
 
         if do_you_want_to_book == 'yes':
-            credit_card = '1234567812341234'
-            credit_cvc = '123'
-            credit_date = "06/26"
+            credit_card = '1234567812347213'
+            credit_cvc = '473'
+            credit_date = "12/29"
 
             credit_card_instance = CreditCard(
                 name, last_name, card_path,

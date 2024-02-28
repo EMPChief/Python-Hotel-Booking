@@ -21,7 +21,7 @@ id,name,city,capacity,available
 378,Loft Living Downtown,New York City,2,yes
 509,Rustic Cabin Getaway,Denver,5,yes
 629,Modern City Studio,Tokyo,3,yes
-711,Quaint Village Cottage,Amsterdam,3,yes
+711,Quaint Village Cottage,Amsterdam,0,no
 812,Coastal Escape Haven,Los Angeles,0,no
 923,Riverside Retreat,Lisbon,3,yes
 245,Mountain Hideaway,Denver,4,yes
