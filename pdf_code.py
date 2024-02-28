@@ -2,7 +2,7 @@ from fpdf import FPDF
 import pandas as pd
 import random
 
-class ArticleReceiptGenerator:
+class ArticleManager:
     def __init__(self, articles_path):
         self.articles_path = articles_path
 
@@ -31,8 +31,8 @@ class ArticleReceiptGenerator:
             else:
                 print(f"Article {article['name']} is out of stock.")
                 return None
-                
-    
+
+class ReceiptGenerator:
     @staticmethod
     def generate_article_receipt(article):
         random_receipt_number = random.randint(1, 9999)
@@ -47,13 +47,14 @@ class ArticleReceiptGenerator:
         pdf.cell(0, 10, f"Article: {article['name']}", 0, 1)
         pdf.cell(0, 10, f"ID: {article['id']}", 0, 1)
         pdf.cell(0, 10, f"Price: ${article['price']:.2f}", 0, 1)
+        pdf.cell(0, 10, f"In Stock: {article['in_stock']} units", 0, 1)
         
         pdf.output(f"data/article_receipt_{random_receipt_number}.pdf")
 
 if __name__ == "__main__":
-    receipt_generator = ArticleReceiptGenerator("articles.csv")
-    article = receipt_generator.find_article_by_id(106)
+    article_manager = ArticleManager("articles.csv")
+    article = article_manager.find_article_by_id(104)
     if article:
-        receipt_generator.generate_article_receipt(article)
+        ReceiptGenerator.generate_article_receipt(article)
     else:
         print("Article not found.")
