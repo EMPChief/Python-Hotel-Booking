@@ -22,7 +22,7 @@ id,name,city,capacity,available
 509,Rustic Cabin Getaway,Denver,5,yes
 629,Modern City Studio,Tokyo,3,yes
 711,Quaint Village Cottage,Amsterdam,4,yes
-812,Coastal Escape Haven,Los Angeles,5,yes
+812,Coastal Escape Haven,Los Angeles,3,yes
 923,Riverside Retreat,Lisbon,3,yes
 245,Mountain Hideaway,Denver,4,yes
 377,Luxury Villa Estate,Rome,6,yes
@@ -36,5 +36,5 @@ id,name,city,capacity,available
 505,City Skyline View,New York,3,yes
 628,Sunset View Cottage,Santorini,5,yes
 721,Hidden Forest Lodge,Tokyo,4,yes
-839,Tranquil Oasis Villa,Athens,3,yes
+839,Tranquil Oasis Villa,Athens,1,yes
 931,Romantic Vineyard Cottage,Florence,2,yes

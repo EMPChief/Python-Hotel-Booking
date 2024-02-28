@@ -1,0 +1,4 @@
+name,hotel_name,hotel_city,last_name,hotel_id,date,checkout_date
+John,Tranquil Oasis Villa,Athens,Doe,839,2024-02-28 15:12:33.226202,2024-03-01 15:12:33.226205
+John,Coastal Escape Haven,Los Angeles,Doe,812,2024-02-28 15:14:21.328113,2024-03-01 15:14:21.328116
+John,Doe,812,Coastal Escape Haven,Los Angeles,2024-02-28 15:15:55.749152,2024-03-01 15:15:55.749156

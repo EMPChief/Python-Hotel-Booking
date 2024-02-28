@@ -1,10 +1,9 @@
 import pandas as pd
 
-
 class Hotel:
-    def __init__(self, database_path=None, hotel_id=None):
+    def __init__(self, database_path=None, hotel_room_id=None):
         self.path = database_path
-        self.hotel_id = hotel_id
+        self.hotel_id = hotel_room_id
 
     def read_database(self):
         hotels_data = pd.read_csv(self.path, dtype={
