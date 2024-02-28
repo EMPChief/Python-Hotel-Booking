@@ -1,6 +1,6 @@
 import pandas as pd
 import datetime
-
+import json
 
 class ReservationTicket:
     def __init__(self, hotel_id, customer_name, customer_last_name, stay_time, db_path=None):
@@ -8,8 +8,8 @@ class ReservationTicket:
         self.name = customer_name
         self.last_name = customer_last_name
         self.path = db_path
-        self.current_date = datetime.datetime.now()
-        self.checkout_date = datetime.datetime.now() + datetime.timedelta(days=stay_time)
+        self.current_date = datetime.datetime.now().isoformat()
+        self.checkout_date = (datetime.datetime.now() + datetime.timedelta(days=stay_time)).isoformat()
 
     def read_database(self):
         hotels_data = pd.read_csv(self.path, dtype={
@@ -47,3 +47,8 @@ Checkout Date: {self.checkout_date}
             'checkout_date': [self.checkout_date]
         })
         return ticket_content
+
+if __name__ == "__main__":
+    reservation = ReservationTicket(hotel_id=101, customer_name="John", customer_last_name="Doe", stay_time=3)
+    ticket = reservation.generate_ticket()
+    print(json.dumps(ticket.to_dict(orient='records'), indent=4))
