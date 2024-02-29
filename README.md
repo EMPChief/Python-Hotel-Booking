@@ -1,10 +1,7 @@
-# GitHub Scraping Program Hotel Booking
+# GitHub Python Hotel Booking
+This project is a hotel booking system that uses Python and the Pandas library.
+Interactive Python hotel booking system using Pandas.
 
-This is a Python program that uses web scraping techniques to extract data from GitHub repositories. The program retrieves information such as repository name, description, stars, forks, and contributors.
-
-# GitHub Scraping Program Hotel Booking
-
-This is a Python program that uses web scraping techniques to extract data from GitHub repositories. The program retrieves information such as repository name, description, stars, forks, and contributors.
 
 This program contains several classes:
 
