@@ -110,4 +110,10 @@ def spa_reservation_process(path, hotel_instance, ticket_path, customer_name, cu
 
 
 if __name__ == '__main__':
-    main()
+    while True:
+        main()
+        do_you_want_to_continue = input("Do you want to continue? (yes/no): ").lower()
+        if do_you_want_to_continue == 'no':
+            break
+        else:
+            continue
