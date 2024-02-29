@@ -49,10 +49,10 @@ class ReceiptGenerator:
         pdf.cell(0, 10, f"Price: ${article['price']:.2f}", 0, 1)
         pdf.cell(0, 10, f"In Stock: {article['in_stock']} units", 0, 1)
         
-        pdf.output(f"data/article_receipt_{random_receipt_number}.pdf")
+        pdf.output(f"data/pdf/article_receipt_{random_receipt_number}.pdf")
 
 if __name__ == "__main__":
-    article_manager = ArticleManager("articles.csv")
+    article_manager = ArticleManager("data/articles.csv")
     article = article_manager.find_article_by_id(104)
     if article:
         ReceiptGenerator.generate_article_receipt(article)
