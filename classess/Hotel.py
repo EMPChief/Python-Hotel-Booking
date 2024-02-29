@@ -53,3 +53,15 @@ class Hotel:
         availability = hotels_data.loc[hotels_data['id']
                                        == self.hotel_id, 'available'].values[0]
         return availability == 'yes'
+    
+    @classmethod
+    def get_hotel_count(cls, path):
+        hotel_data = pd.read_csv(path, dtype={
+            'id': 'int',
+            'name': 'str',
+            'city': 'str',
+            'capacity': 'int',
+            'available': 'str',
+            })
+        hotel_count = len(hotel_data)
+        return hotel_count

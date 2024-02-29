@@ -1,4 +1,4 @@
-from utility import Hotel, ReservationTicket, CreditCard, CreditCardSecurity, SpaTicket
+from classess import Hotel, ReservationTicket, CreditCard, CreditCardSecurity, SpaTicket
 import os
 import random
 
