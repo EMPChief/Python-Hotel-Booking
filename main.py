@@ -4,7 +4,7 @@ import os
 import re
 
 if __name__ == '__main__':
-    user_hotel_id = 711
+    user_hotel_id = 373
     path = 'hotels.csv'
     ticket_path = 'ticket.csv'
     card_path = 'cards.csv'

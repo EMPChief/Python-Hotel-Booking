@@ -1,5 +1,4 @@
 import pandas as pd
-import datetime
 
 
 class CreditCard:
@@ -25,31 +24,19 @@ class CreditCard:
             return None
 
     def validate(self):
-        cards_data = self.read_database()
-        if cards_data is None:
-            return False
-
         try:
-            current_date = datetime.datetime.now().date()
-
-            card_info = cards_data[cards_data['number'].str[-4:]
-                                   == str(self.credit_card)[-4:]]
-            if card_info.empty:
+            card_data = self.read_database()
+            if card_data is None:
                 return False
+            provided_last_4 = self.credit_card[-4:]
+            matched_card = card_data[card_data['number'].str[-4:]
+                                     == provided_last_4]
 
-            card_exp = card_info['expiration'].iloc[0]
-            card_cvc = card_info['cvc'].iloc[0] if 'cvc' in card_info.columns else None
-            card_holder = card_info['holder'].iloc[0]
-            full_name = f"{self.first_name.upper()} {self.last_name.upper()}"
-
-            card_exp_date = datetime.datetime.strptime(
-                card_exp, '%m/%y').date()
-
-            if card_exp_date > current_date and \
-                    card_cvc == str(self.credit_cvc) and \
-                    all(part.upper() in card_holder.upper() for part in full_name.split()):
+            if not matched_card.empty and matched_card['cvc'].iloc[0] == self.credit_cvc and matched_card['expiration'].iloc[0] == self.credit_date:
                 return True
             else:
                 return False
-        except Exception:
+
+        except Exception as e:
+            print(f"Error validating card: {e}")
             return False

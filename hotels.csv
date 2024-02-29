@@ -10,7 +10,7 @@ id,name,city,capacity,available
 819,Tranquil Villa Retreat,Bali,0,no
 927,Lakeside Lodge,Oslo,3,yes
 104,Desert Rose Retreat,Dubai,6,yes
-373,Countryside Cottage,Paris,50,yes
+373,Countryside Cottage,Paris,35,yes
 449,Tropical Hideaway,Cancun,0,no
 236,Cottage by the Lake,Seattle,4,yes
 599,Hilltop Haven,Athens,3,yes
@@ -32,7 +32,7 @@ id,name,city,capacity,available
 846,Mountain Chalet Escape,Whistler,0,no
 959,Beachside Paradise Resort,Bali,0,no
 267,Forest Cabin Retreat,Oslo,2,yes
-383,Grand Lakeview Mansion,Los Angeles,6,yes
+383,Grand Lakeview Mansion,Los Angeles,4,yes
 505,City Skyline View,New York,3,yes
 628,Sunset View Cottage,Santorini,5,yes
 721,Hidden Forest Lodge,Tokyo,4,yes
