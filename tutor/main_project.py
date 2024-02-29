@@ -1,6 +1,7 @@
 from utility import Hotel, ReservationTicket, CreditCard, CreditCardSecurity, SpaTicket
 import os
-import random
+
+
 def main():
     user_hotel_id = 373
     path = 'data/hotels.csv'
@@ -14,31 +15,29 @@ def main():
     print(hotel_instance.read_database())
 
     if hotel_instance.is_hotel_available():
-        name = 'John'
-        last_name = 'Doe'
-        stay_time = 5
-
-        reservation_instance = ReservationTicket(
-            user_hotel_id, name, last_name, stay_time, db_path=path)
+        # Get customer name from the hotel
+        spa_ticket = SpaTicket(hotel_instance)
+        spa_booking_details = spa_ticket.generate()
 
         print("Hotel is available.")
-        do_you_want_to_book = input(
-            "Do you want to book this hotel? (yes/no): ").lower()
+        print(spa_booking_details)
+
+        do_you_want_to_book = input("Do you want to book this hotel? (yes/no): ").lower()
 
         if do_you_want_to_book == 'yes':
+            name = 'John'
+            last_name = 'Doe'
+            stay_time = 5
+
+            reservation_instance = ReservationTicket(
+                user_hotel_id, name, last_name, stay_time, db_path=path)
+
             book_hotel_process(hotel_instance, reservation_instance,
                                ticket_path, card_path, card_sec_path, name, last_name)
         else:
             print("No booking made.")
-            
-        do_you_want_spa = input("Do you want to book a SPA reservation? (yes/no): ").lower()
-        if do_you_want_spa == 'yes':
-            spa_reservation_process(path, hotel_instance, ticket_path, name, last_name)
-        else:
-            print("No SPA booking made.")
     else:
         print("Hotel is not available.")
-
 
 
 def book_hotel_process(hotel_instance, reservation_instance, ticket_path, card_path, card_sec_path, name, last_name):
@@ -83,29 +82,6 @@ def validate_and_book_hotel(hotel_instance, reservation_instance, ticket_path, c
             return True
     else:
         return False
-
-
-def spa_reservation_process(path, hotel_instance, ticket_path, customer_name, customer_last_name):
-    if hotel_instance.is_hotel_available():
-        spa_ticket = SpaTicket(path, hotel_instance.hotel_id, customer_name, customer_last_name)
-        spa_reservation_content = spa_ticket.generate()
-
-        if os.path.exists(ticket_path):
-            with open(f'data/ticket/spa_ticket_{random.randint(1, 10000)}.txt', 'a') as file:
-                file.write('\n')
-                file.write(spa_reservation_content)
-                print(spa_reservation_content)
-        else:
-            with open(f'data/ticket/spa_ticket_{random.randint(1, 10000)}.txt', 'w') as file:
-                file.write(spa_reservation_content)
-                print(spa_reservation_content)
-            print(f"SPA reservation ticket saved to 'data/spa_ticket_{random.randint(1, 10000)}.txt'.")
-    else:
-        print("Hotel is not available for SPA booking.")
-
-
-
-
 
 
 if __name__ == '__main__':
