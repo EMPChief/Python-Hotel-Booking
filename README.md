@@ -5,7 +5,7 @@ Interactive Python hotel booking system using Pandas.
 
 This program contains several classes:
 
-- **UserInfo** - stores user information like name, email, phone number
+- **UserInfo** - stores user information like name, email, phone number (Not implemented)
 - **Hotel** - stores hotel information like name, address, rooms
 - **ReservationTicket** - stores reservation details like user, hotel, check-in/out dates
 - **CreditCardSecurity** - handles credit card authorization by verifying the card number and password against a database
