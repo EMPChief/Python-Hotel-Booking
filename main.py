@@ -1,6 +1,8 @@
 from utility import Hotel, ReservationTicket, CreditCard, CreditCardSecurity, SpaTicket
 import os
 import random
+
+
 def main():
     user_hotel_id = 373
     path = 'data/hotels.csv'
@@ -30,15 +32,16 @@ def main():
                                ticket_path, card_path, card_sec_path, name, last_name)
         else:
             print("No booking made.")
-            
-        do_you_want_spa = input("Do you want to book a SPA reservation? (yes/no): ").lower()
+
+        do_you_want_spa = input(
+            "Do you want to book a SPA reservation? (yes/no): ").lower()
         if do_you_want_spa == 'yes':
-            spa_reservation_process(path, hotel_instance, ticket_path, name, last_name)
+            spa_reservation_process(
+                path, hotel_instance, ticket_path, name, last_name)
         else:
             print("No SPA booking made.")
     else:
         print("Hotel is not available.")
-
 
 
 def book_hotel_process(hotel_instance, reservation_instance, ticket_path, card_path, card_sec_path, name, last_name):
@@ -87,7 +90,8 @@ def validate_and_book_hotel(hotel_instance, reservation_instance, ticket_path, c
 
 def spa_reservation_process(path, hotel_instance, ticket_path, customer_name, customer_last_name):
     if hotel_instance.is_hotel_available():
-        spa_ticket = SpaTicket(path, hotel_instance.hotel_id, customer_name, customer_last_name)
+        spa_ticket = SpaTicket(path, hotel_instance.hotel_id,
+                               customer_name, customer_last_name)
         spa_reservation_content = spa_ticket.generate()
 
         if os.path.exists(ticket_path):
@@ -99,13 +103,10 @@ def spa_reservation_process(path, hotel_instance, ticket_path, customer_name, cu
             with open(f'data/ticket/spa_ticket_{random.randint(1, 10000)}.txt', 'w') as file:
                 file.write(spa_reservation_content)
                 print(spa_reservation_content)
-            print(f"SPA reservation ticket saved to 'data/spa_ticket_{random.randint(1, 10000)}.txt'.")
+            print(
+                f"SPA reservation ticket saved to 'data/spa_ticket_{random.randint(1, 10000)}.txt'.")
     else:
         print("Hotel is not available for SPA booking.")
-
-
-
-
 
 
 if __name__ == '__main__':
