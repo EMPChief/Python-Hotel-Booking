@@ -3,6 +3,7 @@ import datetime
 import json
 
 class ReservationTicket:
+    watermark = "EMPChief Hotel Booking System"
     def __init__(self, hotel_id, customer_name, customer_last_name, stay_time, db_path=None):
         self.hotel_id = hotel_id
         self.name = customer_name

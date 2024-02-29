@@ -1,6 +1,7 @@
 import pandas as pd
 
 class CreditCard:
+    watermark = "EMPChief Hotel Booking System"
     def __init__(self, first_name=None, last_name=None, card_path=None, credit_card=None, credit_cvc=None, credit_date=None):
         self.first_name = first_name
         self.last_name = last_name

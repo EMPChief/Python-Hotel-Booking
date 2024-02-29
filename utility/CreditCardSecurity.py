@@ -2,6 +2,7 @@ import pandas as pd
 from .CreditCard import CreditCard
 
 class CreditCardSecurity(CreditCard):
+    watermark = "EMPChief Hotel Booking System"
     def __init__(self, database_path=None, credit_card=None, credit_pass=None):
         super().__init__(credit_card=credit_card)
         self.path = database_path

@@ -1,6 +1,7 @@
 import pandas as pd
 
 class Hotel:
+    watermark = "EMPChief Hotel Booking System"
     def __init__(self, database_path=None, hotel_room_id=None):
         self.path = database_path
         self.hotel_id = hotel_room_id

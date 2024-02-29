@@ -1,6 +1,7 @@
 import pandas as pd
 
 class SpaTicket:
+    watermark = "EMPChief Hotel Booking System"
     def __init__(self, path, hotel_id, customer_name, customer_last_name):
         self.hotel_id = hotel_id
         self.customer_name = customer_name
