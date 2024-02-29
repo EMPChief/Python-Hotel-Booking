@@ -34,6 +34,9 @@ After successfully booking a hotel room, a reservation ticket will be generated.
 Please note that this document provides a high-level overview of the hotel booking system. For more detailed information, please refer to the relevant documentation or contact the system administrator.
 
 ### Classes:
-- User
+- User <uneeded>
 - Hotel
 - ReservationTicket
+- CreditCard
+- CreditCardSecurity
+- SpaTicket
