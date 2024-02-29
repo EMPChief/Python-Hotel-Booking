@@ -1,0 +1,7 @@
+
+
+        Thank you for your SPA reservation!
+        Here are your SPA booking details:
+        Name: John Doe
+        Hotel Name: Countryside Cottage
+        

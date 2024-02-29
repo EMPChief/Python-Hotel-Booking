@@ -1,6 +1,5 @@
 
 __pycache__/
-data/
 build/
 .venv/
 *.m4a
